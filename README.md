@@ -1,6 +1,6 @@
 # Ghost Mesh Plugin for Godot C#
 
-This plugin adds a new node type to the Godot editor, "GhostMesh". When added as the child of a MeshInstance3D, the GhostMesh renders another instance of its parent mesh, but with separate rendering layers and material.
+This plugin adds a new node to the Godot editor, "GhostMesh". When added as the child of a MeshInstance3D, the GhostMesh renders another instance of its parent mesh, but with separate rendering layers and material.
 
 Essentially this is the same as having a second MeshInstance3D node that shares the same mesh and skeleton, but is more convenient and automatically handles changes to the parent MeshInstance3D when running in the editor.
 Because the GhostMesh shares the parent mesh and skeleton, any animations in the parent will also be reflected.
@@ -10,3 +10,17 @@ Setups with multiple viewports which are then combined in post-processing will f
 ![Description](screenshots/unit_outline_example.gif)
 - Stylized pixel outlines. In my game that uses 3D graphics rendered in a pixelated fake-2D style, objects are rendered again with a flat color on a separate layer and viewport. The flat colors are compared against neighbouring pixels to find edges, and the final result is composited over the main viewport to create pixel outlines.  
 ![Description](screenshots/pixel_outline_example.png)
+
+## Usage
+Install via the Godot Asset Library, ignore asset root when installing.
+
+Add the GhostMesh node as the child of a MeshInstance3D node and assign a material.
+
+When changing the parent mesh resource in the editor the child GhostMesh will automatically update, when the game is running you must call UpdateInstance() on the GhostMesh node or it will continue to use the previous parent mesh.
+
+## Notes
+I can create a GDScript version and provide demo projects using the GhostMesh node if people are interested.
+
+Created in Godot 4.5, but appears to be working fine in 4.0.
+
+This is my first time creating a Godot plugin so let me know of any issues.
