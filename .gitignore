@@ -2,6 +2,7 @@ project.godot
 .editorconfig
 *.csproj
 *.sln
+.vs/
 
 # Godot 4+ specific ignores
 .godot/
