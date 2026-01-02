@@ -16,7 +16,7 @@ Install via the Godot Asset Library, ignore asset root when installing.
 
 Add the GhostMesh node as the child of a MeshInstance3D node and assign a material.
 
-When changing the parent mesh resource in the editor the child GhostMesh will automatically update, when the game is running you must call UpdateInstance() on the GhostMesh node or it will continue to use the previous parent mesh.
+When changing the parent mesh resource in the editor the child GhostMesh will automatically update. When the game is running you must call UpdateInstance() on the GhostMesh node or it will continue to use the previous parent mesh.
 
 ## Notes
 I can create a GDScript version and provide demo projects using the GhostMesh node if people are interested.
