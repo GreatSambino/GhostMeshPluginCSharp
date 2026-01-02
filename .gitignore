@@ -3,6 +3,8 @@ project.godot
 *.csproj
 *.sln
 .vs/
+*.uid
+*.import
 
 # Godot 4+ specific ignores
 .godot/
